@@ -27,5 +27,12 @@ public class UserRegistrationTest {
 		boolean k=user.isValidemailid("abc.xyz@bl.co");
 		Assert.assertEquals(false, k);
 	}
+	@Test
+	public void NumberCheck()
+	{
+		UserRegistration user = new UserRegistration();
+		boolean k=user.isValidmobnum("+91 9236547892");
+		Assert.assertEquals(true, k);
+	}
 	
 }

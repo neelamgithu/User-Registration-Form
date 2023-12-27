@@ -19,10 +19,30 @@ public class UserRegistration {
 		        Scanner emailid = new Scanner(System.in);
 		        String email= scanner.nextLine();
 		        System.out.println(isValidemailid(email));
+		        
+		        System.out.print("Enter your mobile number ");
+		        Scanner mob = new Scanner(System.in);
+		        String number= scanner.nextLine();
+		        System.out.println(isValidmobnum(number));
 	}
     
 
 	
+	public static boolean isValidmobnum(String number) {
+		if(number !=null && number.matches("^A[0-9]{2}+\\s\\A[0-9]{10}\\z"))
+		 {
+			  return true;
+		  }
+			
+		  else 
+			  	{return false;}
+      
+		  
+		
+	}
+
+
+
 	public static  boolean  isValidemailid(String email) {
 		if(email != null && email.matches("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-z]{2,}(\\.[a-z]{2,})?$\r\n"
 				+ ""))
