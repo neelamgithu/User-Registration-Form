@@ -14,10 +14,27 @@ public class UserRegistration {
 		        Scanner sc = new Scanner(System.in);
 		        String LastName = scanner.nextLine();
 		        System.out.println(isValidLastName(LastName));
+		        
+		        System.out.print("Enter your email id ");
+		        Scanner emailid = new Scanner(System.in);
+		        String email= scanner.nextLine();
+		        System.out.println(isValidemailid(email));
 	}
     
 
 	
+	public static  boolean  isValidemailid(String email) {
+		if(email != null && email.matches("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-z]{2,}(\\.[a-z]{2,})?$\r\n"
+				+ ""))
+			{return true;
+	  }
+		
+	  else {
+		  	return false;
+ 
+	  }
+	}
+
 	public static boolean isValidLastName(String LastName) {
 		 if( LastName != null && LastName.matches("[A-Z][a-zA-Z]{2,}"))
 		  {

@@ -17,7 +17,15 @@ public class UserRegistrationTest {
 	public void should_return_true_after_giving_Last_letter_capital_()
 	{
 		UserRegistration user =new UserRegistration();
-        boolean k = user.isValidLastName("Neelam");
+        boolean k = user.isValidLastName("Mujawar");
         Assert.assertEquals(true,k);
 	}
+	@Test
+	public void EmailCheck()
+	{
+		UserRegistration user = new UserRegistration();
+		boolean k=user.isValidemailid("abc.xyz@bl.co");
+		Assert.assertEquals(false, k);
+	}
+	
 }
