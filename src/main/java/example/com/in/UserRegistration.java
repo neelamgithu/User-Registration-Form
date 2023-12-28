@@ -32,7 +32,7 @@ public class UserRegistration {
 	
 	}
 	public static boolean isValidpassword(String password) {
-		if(password !=null && password.matches("^(?=.*[A-Z]).*$"))
+		if(password !=null && password.matches("^(?=.*\\d.*\\D*\\d).*$"))
 		 {
 			  return true;
 		  }
