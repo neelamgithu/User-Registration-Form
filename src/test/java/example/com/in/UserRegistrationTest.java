@@ -38,7 +38,7 @@ public class UserRegistrationTest {
 	public void passwordCheck()
 	{
 		UserRegistration user = new UserRegistration();
-		boolean k=user.isValidpassword("neelammm");
+		boolean k=user.isValidpassword("Neelammm");
 		Assert.assertEquals(true, k);
 	}
 	
