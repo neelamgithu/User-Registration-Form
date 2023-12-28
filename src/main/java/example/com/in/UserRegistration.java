@@ -24,12 +24,29 @@ public class UserRegistration {
 		        Scanner mob = new Scanner(System.in);
 		        String number= scanner.nextLine();
 		        System.out.println(isValidmobnum(number));
+		        
+		        System.out.print("Enter your passward ");
+		        Scanner pass = new Scanner(System.in);
+		        String password = scanner.nextLine();
+		        System.out.println(isValidpassword(password));
+	
 	}
-    
+	public static boolean isValidpassword(String password) {
+		if(password !=null && password.matches("^[a-zA-Z''-'\\s]{1,150}$"))
+		 {
+			  return true;
+		  }
+			
+		  else 
+			  	{return false;}
+      
+		  
+		
+	}
 
 	
 	public static boolean isValidmobnum(String number) {
-		if(number !=null && number.matches("^A[0-9]{2}+\\s\\A[0-9]{10}\\z"))
+		if(number !=null && number.matches("((\\+)((0[ -])|((91 )))((\\d{12})+|(\\d{10})+))|\\d{5}([- ]*)\\d{6}"))
 		 {
 			  return true;
 		  }
@@ -44,8 +61,8 @@ public class UserRegistration {
 
 
 	public static  boolean  isValidemailid(String email) {
-		if(email != null && email.matches("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-z]{2,}(\\.[a-z]{2,})?$\r\n"
-				+ ""))
+		if(email != null && email.matches("^[a-zA-Z0-9_+&-]+(?:\\\\.[a-zA-Z0-9_+&-]+)*@\" +\r\n"
+				+ "                \"(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,7}$"))
 			{return true;
 	  }
 		
